@@ -585,6 +585,7 @@ display: flex;
 align-items: center; 
 justify-content: center; 
 background-color: #e7e9fc; 
+color: var(--CORNFLOWER);
 border: 1px solid rgba(0, 0, 0, 0.1); 
 padding: 0; 
 cursor: pointer; 
@@ -600,6 +601,7 @@ border: none;
 }
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  fill:currentColor;
 }
 .close {
     fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
