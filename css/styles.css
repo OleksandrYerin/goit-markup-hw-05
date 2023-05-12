@@ -562,7 +562,7 @@ footer .social-icons {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: var(--OCEAN);
-    color-scheme: var(--WHITE);
+    color: var(--WHITE);
     border: none; 
 }
 .modal-close-icon {
