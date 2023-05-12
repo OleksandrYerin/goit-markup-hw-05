@@ -485,7 +485,7 @@ footer .social-icons {
     position: relative;  
 }
 .portfolio-link:hover .overlay,
-.portfolio-link:hover .overlay {
+.portfolio-link:focus .overlay {
     transform: translateY(0%);
     }
 .portfolio-link:hover,
