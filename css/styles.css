@@ -57,7 +57,8 @@ nav {
     gap: 40px;
 }
 .menu {
-    position: relative;
+    position: relative;    
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -65,8 +66,8 @@ nav {
     color: var(--SLATE);
     bottom: -1px;
     padding: 24px 0;
-    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1)
     }
+
 .active-link {
     color: #404bbf
 }
@@ -92,6 +93,7 @@ bottom: -1px;
 }
 .link-address {
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -99,7 +101,7 @@ bottom: -1px;
     color: var(--SLATE);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .logo {
     display: block;
@@ -215,14 +217,14 @@ header .logo {
 .social-link,
 .footer-link {
     display: flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--IRIS);
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: var(--IRIS);
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1); */
+      
 }
 .social-link:hover,
 .social-link:focus {
@@ -265,6 +267,7 @@ header .logo {
 }
 .button {
     display: block; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
@@ -280,7 +283,7 @@ header .logo {
     min-width: 169px; 
     height: 56px;
     border: none; 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .button:hover,
 .button:focus {
@@ -335,7 +338,8 @@ header .logo {
  }
  .customers-link {
     display: flex;
-    gap: 24px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+       gap: 24px;
     border: 1px solid var(--BORDER-CUSTOMER);
     color: var(--BORDER-CUSTOMER);
     border-radius: 4px;
@@ -343,8 +347,7 @@ header .logo {
     height: 100%;
     justify-content: center;
     align-items: center;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-   
+ 
  }
  .customers-list-icon {
     fill: currentColor;
@@ -383,8 +386,9 @@ header .logo {
 }
 .bottom .logo {
     display: inline-block;
-    margin-bottom: 16px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 16px;
+   
     }
 footer .social-icons {
     display: flex;
@@ -407,6 +411,7 @@ footer .social-icons {
 }
 
 .filter-btn {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     font-family: inherit;
@@ -418,9 +423,9 @@ footer .social-icons {
     border: 1px solid var(--CORNFLOWER);
     border-radius: 4px;
     padding: 12px 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
+   
 }
+.filter-btn:focus,
 .filter-btn:focus {
     color: var(--WHITE);
     background-color: var(--OCEAN);
@@ -428,7 +433,7 @@ footer .social-icons {
       } 
   
 .active {
-    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .active:active {
     color: var(--OCEAN);
@@ -447,45 +452,40 @@ footer .social-icons {
 
 .overlay {
     position: absolute;
-   top:0;
-left: 0;
-width: 100%;
-   height: 100%;  
-   transform: translate(100%);
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-  color: #F4F4FD;
-   background-color: var(--IRIS);
-   
- padding: 40px 32px;
- 
-}
+    transform: translate(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background-color: var(--IRIS);
+    padding: 40px 32px;
+ }
 
 .card-overlay{
     position: relative;
     overflow: hidden;
 }
 .card-text {
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
     padding: 32px 16px;
     border: 1px solid var(--CORNFLOWER);
     border-top: none;
-    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }    
 .card-text:hover { 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
 }
 .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
-    
 }
-.portfolio-link {
-display: block; 
-position: relative;  
-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+.portfolio-link {   
+    display: block; 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;  
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -494,7 +494,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-link:hover .overlay{
     transition: translateY(100%);
 }
-
 .portfolio-header {
     font-weight: 500;
     font-size: 20px;
@@ -511,31 +510,30 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--SLATE);
 }
 .backdrop {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(46, 47, 66, 0.4);
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
- pointer-events: none;  
- visibility: hidden; 
- opacity: 0;
+    pointer-events: none;  
+    visibility: hidden; 
+    opacity: 0;
 }
 .modal {
-position: absolute;
-top: 50%;
-left: 50%;
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-transform: translate(-50%, -50%) scale(1); 
-width: 408px;
-min-height: 576px; 
-background: #fcfcfc;
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px; 
+    position: absolute;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1); 
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    min-height: 576px; 
+    background: #fcfcfc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; 
 }
  .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.5);
@@ -546,32 +544,32 @@ border-radius: 4px;
 
 .modal-close-btn {
     position: absolute; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #e7e9fc; 
+    color: var(--NAVY_BLUE);
     top: 24px; 
     right: 24px;
     width: 24px; 
     height: 24px; 
     border-radius: 50%; 
-display: flex; 
-align-items: center; 
-justify-content: center; 
-background-color: #e7e9fc; 
-color: var(--CORNFLOWER);
-border: 1px solid rgba(0, 0, 0, 0.1); 
-padding: 0; 
-cursor: pointer; 
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 0; 
+    cursor: pointer; 
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-background-color: var(--OCEAN);
-fill: var(--WHITE);
-border: none; 
+    background-color: var(--OCEAN);
+    color-scheme: var(--WHITE);
+    border: none; 
 }
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  fill: currentColor;
+
 }
 .close {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: currentColor;
 }
-/* color var(--active-page-color-) */
