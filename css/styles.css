@@ -85,11 +85,13 @@ nav {
  
  .link {
     text-decoration: none;
-   
 }
 .address-list {
     display: flex;
     gap: 40px;
+}
+.contacts {
+font-style: normal;
 }
 .link-address {
     display: block;
